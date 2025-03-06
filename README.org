@@ -172,6 +172,7 @@ In an effort to reduce the size overhead of the project, any extra features can 
 | =VIM_NUMBERED_JUMPS=      | Adds the ability to do numbered motions, ie ~10j~ or ~5w~, be wary of large numbers however, as they can freeze up your keyboard. | -544 B            |
 | =ONESHOT_VIM=             | Enables running vim in "oneshot" mode, see [[#oneshot-vim][oneshot vim]] for details.                                             | -76 B             |
 | =VIM_FOR_ALL=             | Adds the ability to toggle Mac support on and off at runtime, rather than only at compile time.                                   | -456 B            |
+| =VIM_ESCAPE_PASSTHROUGH=  | Adds the ability to send escape character while vim mode is active.                                                               |    0 B            |
 
 *** Text Objects
 Unfortunately there is really no way to implement text objects properly,

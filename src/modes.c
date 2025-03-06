@@ -77,6 +77,13 @@ bool process_normal_mode(uint16_t keycode, const keyrecord_t *record) {
     #define NO_RECORD_ACTION()
 #endif
 
+#ifdef VIM_ESC_PASSTHROUGH
+    // Pass through Escape when already in normal mode
+    if (keycode == KC_ESC) {
+        return true;
+    }
+#endif
+
     // process numbers for numbered actions
 #ifdef VIM_NUMBERED_JUMPS
     if (!process_numbers(keycode, record)) {
