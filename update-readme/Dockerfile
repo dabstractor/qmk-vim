@@ -1,6 +1,6 @@
-FROM qmkfm/qmk_firmware:latest
+FROM jonz94/qmk_firmware:latest
 
-ENV MY_KEYMAP_PATH=/qmk_firmware/keyboards/uno/keymaps/qmk-vim-update-readme
+ENV MY_KEYMAP_PATH=/qmk_firmware/keyboards/keyhive/uno/keymaps/qmk-vim-update-readme
 
 WORKDIR /qmk_firmware
 

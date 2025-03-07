@@ -1,1 +1,1 @@
-include keyboards/uno/keymaps/qmk-vim-update-readme/qmk-vim/rules.mk
+include keyboards/keyhive/uno/keymaps/qmk-vim-update-readme/qmk-vim/rules.mk

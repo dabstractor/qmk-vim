@@ -20,7 +20,7 @@ with open(README_PATH) as f:
 # Compile and parse output for firmware size
 def get_firmware_size():
     process = subprocess.run(
-        ['qmk', 'compile', '-kb', 'uno', '-km', 'qmk-vim-update-readme'], capture_output=True)
+        ['qmk', 'compile', '-kb', 'keyhive/uno/rev2', '-km', 'qmk-vim-update-readme'], capture_output=True)
     matches = re.search(r'The firmware size is fine - (\d+)', process.stdout.decode('utf-8'))
     return int(matches[1])
 
