@@ -173,7 +173,7 @@ In an effort to reduce the size overhead of the project, any extra features can 
 | =VIM_NUMBERED_JUMPS=      | Adds the ability to do numbered motions, ie ~10j~ or ~5w~, be wary of large numbers however, as they can freeze up your keyboard. | -472 B            |
 | =ONESHOT_VIM=             | Enables running vim in "oneshot" mode, see [[#oneshot-vim][oneshot vim]] for details.                                             | -84 B             |
 | =VIM_FOR_ALL=             | Adds the ability to toggle Mac support on and off at runtime, rather than only at compile time.                                   | -600 B            |
-| =ESCAPE_PASSTHROUGH=      | Allows passthrough of the `Escape` key in Normal mode while retaining its Insert mode behavior.                                   | +0 B              |
+| =VIM_ESC_PASSTHROUGH=     | Allows passthrough of the `Escape` key in Normal mode while retaining its Insert mode behavior.                                   | -8 B              |
 
 *** Text Objects
 Unfortunately there is really no way to implement text objects properly,
@@ -253,7 +253,7 @@ context, such as interacting with external tools or systems. Without this featur
 all `Escape` presses are intercepted, making it impossible to send the keycode
 without disabling Vim mode entirely.
 
-To enable this feature, add the `ESCAPE_PASSTHROUGH` macro to your `config.h`.
+To enable this feature, add the `VIM_ESC_PASSTHROUGH` macro to your `config.h`.
 
 * Configuration
 ** Setup
@@ -426,5 +426,5 @@ to the table manually by running the following commands in the root directory of
 repository (it may take a few minutes, since it recompiles for each feature in the table):
 #+begin_src bash
 docker build -t qmk-vim-update-readme update-readme
-docker run -v $PWD:/qmk_firmware/keyboards/uno/keymaps/qmk-vim-update-readme/qmk-vim qmk-vim-update-readme
+docker run -v $PWD:/qmk_firmware/keyboards/keyhive/uno/keymaps/qmk-vim-update-readme/qmk-vim qmk-vim-update-readme
 #+end_src
